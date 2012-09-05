@@ -6,7 +6,7 @@
 // with zero mean and variance sigma^2
 // Plot v(n).
 
-function[]=uniformnoise(variance,N)
+function[randvec]=uniformnoise(variance,N)
     nvec=linspace(0,N,N+1)
     //disp(nvec)
     rand('normal') //Want a normal variable
