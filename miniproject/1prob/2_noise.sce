@@ -7,7 +7,7 @@
 // Plot v(n).
 
 function[randvec]=uniformnoise(variance,N)
-    nvec=linspace(0,N,N+1)
+    nvec=linspace(0,N-1,N)
     //disp(nvec)
     rand('normal') //Want a normal variable
     randvec=rand(nvec)  //Want N values of random variable
