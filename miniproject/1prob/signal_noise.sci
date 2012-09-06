@@ -1,0 +1,9 @@
+exec("sinusoidal_vector.sci",-1)
+exec("normalnoisevec.sci",-1)
+function[yvec]=signalnoise(a,N,Variance)
+    xvec=sinusoidalvec(a,N)
+    vvec=gaussiannoise(Variance,N)
+    //disp(length(xvec))
+    //disp(length(vvec))
+    yvec=xvec+vvec
+endfunction
