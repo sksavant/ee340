@@ -11,14 +11,16 @@
 //Barker NOT WORKING : To FIX TO Auto_Correlation
 function[corrvec]=auto_correlation(sequence)
     N=length(sequence)
-    nvec=linspace(0,2*N,2*N) // -
+    nvec=linspace(-12,12,25) // -
+    if (N>13) then
+        disp("Invalid")
+    end
     corrvec=[]
-    for i=0:2*N-1 // i= 0 to 2N+1
+    for m=-12:12
         corrval=0
-        for j=1:N
-            if(i-j>0 & i-j<=N) then
-                //disp(i-j)
-                corrval=corrval+sequence(i-j)*sequence(j)
+        for n=1:13
+            if (n-m>0 & n-m<=13) then
+                corrval=corrval+sequence(n)*sequence(n-m)
             end
         end
         corrvec=[corrvec,corrval]
