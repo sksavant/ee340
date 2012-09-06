@@ -1,6 +1,6 @@
-// Group_13:    Bhargava B
-//              Surya K
-//              S K Savant
+// Group_13:    Bhargava B  100070054
+//              Surya K     100070055
+//              S K Savant  100070056
 // Question:
 //Let v(n) be a Gaussian random sequence with zero mean and variance
 //sigma^2 . Write a program that generates the sequence y(n), 

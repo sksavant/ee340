@@ -1,6 +1,6 @@
-// Group_13:    Bhargava B
-//              Surya K
-//              S K Savant
+// Group_13:    Bhargava B  100070054
+//              Surya K     100070055
+//              S K Savant  100070056
 // Question:
 // To generate and plot a sinusoidal sequence x(n)=cos(a\pi n) 0<=n<=N 0<=a<=1
 exec("sinusoidal_vector.sci",-1)

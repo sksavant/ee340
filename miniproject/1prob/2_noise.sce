@@ -1,6 +1,6 @@
-// Group_13:    Bhargava B
-//              Surya K
-//              S K Savant
+// Group_13:    Bhargava B  100070054
+//              Surya K     100070055
+//              S K Savant  100070056
 // Question:
 // Generate uniformly distributed random noise v(n), 0<=n<=N 
 // with zero mean and variance sigma^2

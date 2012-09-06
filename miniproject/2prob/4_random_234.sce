@@ -1,3 +1,6 @@
+// Group_13:    Bhargava B  100070054
+//              Surya K     100070055
+//              S K Savant  100070056
 exec("2_delay_noise_seq.sce",-1)
 exec("3_cross_correlation.sce",-1)
 xvec=barker

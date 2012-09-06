@@ -1,6 +1,6 @@
-// Group_13:    Bhargava B
-//              Surya K
-//              S K Savant
+// Group_13:    Bhargava B  100070054
+//              Surya K     100070055
+//              S K Savant  100070056
 // Question:
 // Let x(n) be the 13-point Barker sequence 
 // x(n) = {+1, +1, +1, +1, +1, -1, -1, +1, +1, -1, +1, -1, +1}.

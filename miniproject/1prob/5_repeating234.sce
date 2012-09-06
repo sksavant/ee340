@@ -1,3 +1,6 @@
+// Group_13:    Bhargava B  100070054
+//              Surya K     100070055
+//              S K Savant  100070056
 exec("signal_noise.sci",-1)
 y1=signalnoise(0.01,1000,0.01)
 y2=signalnoise(0.01,1000,0.1)
