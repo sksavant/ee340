@@ -1,3 +1,6 @@
+// Group_13:    Bhargava B  100070054
+//              Surya K     100070055
+//              S K Savant  100070056
 //Write a program to obtain the period of x(n) from the noise 
 //corrupted sinusoidal sequence y(n).
 //
