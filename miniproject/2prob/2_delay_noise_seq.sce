@@ -23,7 +23,7 @@ function[yseq]=delay_noise_seq(xseq,variance,alpha,D,plottheg)
     disp(length(yseq))
     for i=1:N
         if (i>20 & i<20+length(xseq)) then
-            disp(i)
+            //disp(i)
             yseq(i)=alpha*xseq(i-20)+noiseseq(i)
         else
             yseq(i)=noiseseq(i)
