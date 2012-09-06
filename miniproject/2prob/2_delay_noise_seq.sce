@@ -17,10 +17,10 @@ function[yseq]=delay_noise_seq(xseq,variance,alpha,D,plottheg)
     nvec=linspace(0,N-1,N)
     //disp(nvec)
     noiseseq=gaussiannoise(variance,N-1)
-    disp(length(noiseseq))
+    //disp(length(noiseseq))
     yseq=nvec
     //disp(21)
-    disp(length(yseq))
+    //disp(length(yseq))
     for i=1:N
         if (i>20 & i<20+length(xseq)) then
             //disp(i)
@@ -29,7 +29,7 @@ function[yseq]=delay_noise_seq(xseq,variance,alpha,D,plottheg)
             yseq(i)=noiseseq(i)
         end
     end
-    disp('ok')
+    //`disp('ok')
     newseq=[]
     for i=1:N
         if (i<=0 | i>length(xseq)) then
@@ -50,4 +50,6 @@ function[yseq]=delay_noise_seq(xseq,variance,alpha,D,plottheg)
     end
 endfunction
 
-delay_noise_seq(sinusoidalvec(0.1,200),0.01,0.9,20,1)
+barker=[1 1 1 1 1 -1 -1 1 1 -1 1 -1 1]
+delay_noise_seq(barker,0.01,0.9,20,1)
+//delay_noise_seq(sinusoidalvec(0.1,200),0.01,0.9,20,1)
