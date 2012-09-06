@@ -38,7 +38,7 @@ function[yseq]=delay_noise_seq(xseq,variance,alpha,D,plottheg)
             newseq=[newseq,xseq(i)]
         end
     end
-    disp(length(newseq))
+    //disp(length(newseq))
     if (plottheg==1) then
         xset('window',1)
         subplot(2,1,1)
