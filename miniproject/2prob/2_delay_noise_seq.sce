@@ -8,33 +8,46 @@
 //y(n), 0 <= n <= 199
 //
 //
-exec "../1prob/2_noise.sce"
-exec "../1prob/1_sinusoidal.sce"
-function[]=delay_noise_seq(xseq,variance,alpha,D)
-    N=length(xseq)
-    nvec=linspace(1,N-1,N)
-    noiseseq=uniformnoise(variance,N+D)
-    //disp(length(noiseseq))
+exec("../1prob/normalnoisevec.sci",-1)
+exec("../1prob/sinusoidal_vector.sci",-1)
+LENGTH_MAX=200
+function[yseq]=delay_noise_seq(xseq,variance,alpha,D,plottheg)
+    N=200//length(xseq)
+    //disp(N)
+    nvec=linspace(0,N-1,N)
+    //disp(nvec)
+    noiseseq=gaussiannoise(variance,N-1)
+    disp(length(noiseseq))
     yseq=nvec
-    //disp(length(yseq))
-    for i=1:N+20
-        if i>20 then
+    //disp(21)
+    disp(length(yseq))
+    for i=1:N
+        if (i>20 & i<20+length(xseq)) then
+            disp(i)
             yseq(i)=alpha*xseq(i-20)+noiseseq(i)
         else
             yseq(i)=noiseseq(i)
         end
     end
-    nvec=linspace(1,N+D-1,N+D)
-    for i=1:D
-        xseq=[xseq,0]
+    disp('ok')
+    newseq=[]
+    for i=1:N
+        if (i<=0 | i>length(xseq)) then
+            newseq=[newseq,0]
+        else
+            newseq=[newseq,xseq(i)]
+        end
     end
-    xset('window',1)
-    subplot(2,1,1)
-    title('Given sequence')
-    plot(nvec,xseq)
-    subplot(2,1,2)
-    title('Delay and Noise sequence')
-    plot(nvec,yseq)
+    disp(length(newseq))
+    if (plottheg==1) then
+        xset('window',1)
+        subplot(2,1,1)
+        title('Given sequence')
+        plot(nvec,newseq)
+        subplot(2,1,2)
+        title('Delay and Noise sequence')
+        plot(nvec,yseq)
+    end
 endfunction
 
-delay_noise_seq(plotsinusoidal(0.1,200),0.01,0.9,20)
+delay_noise_seq(sinusoidalvec(0.1,200),0.01,0.9,20,1)
